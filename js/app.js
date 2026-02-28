@@ -101,7 +101,7 @@ async function initApp(currentUser) {
       await loadData();
       renderLeaderboard(currentUser, dayIdx);
       renderProgramGrid(dayIdx);
-    }, 30000);
+    }, 600000);
   }
 }
 
