@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>30-Day Squat Challenge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=DM+Mono:wght@300;400;500&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div id="login-screen" class="screen active">
+    <div class="login-bg">
+      <div class="login-grid"></div>
+    </div>
+    <div class="login-box">
+      <div class="login-title">
+        <span class="title-big">SQUAT</span>
+        <span class="title-sub">CHALLENGE × 30</span>
+      </div>
+      <div class="login-form">
+        <label>UTILISATEUR</label>
+        <div class="user-select">
+          <button class="user-btn active" data-user="Barbara">Barbara</button>
+          <button class="user-btn" data-user="Nicolas">Nicolas</button>
+        </div>
+        <label>MOT DE PASSE</label>
+        <input type="password" id="password-input" placeholder="••••••••" autocomplete="current-password" />
+        <div id="login-error" class="login-error"></div>
+        <button id="login-btn" class="btn-primary">ENTRER →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- APP SCREEN -->
+  <div id="app-screen" class="screen">
+
+    <!-- HEADER -->
+    <header>
+      <div class="header-left">
+        <span class="logo">SQ30</span>
+        <span id="header-day" class="header-day">JOUR —</span>
+      </div>
+      <div class="header-right">
+        <span id="header-user" class="header-user"></span>
+        <button id="logout-btn" class="btn-logout">↩</button>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+      <!-- TODAY CARD -->
+      <section class="card today-card" id="today-card">
+        <div class="card-label">AUJOURD'HUI</div>
+        <div id="today-content"></div>
+      </section>
+
+      <!-- LOG SQUATS -->
+      <section class="card log-card" id="log-card">
+        <div class="card-label">ENREGISTRER</div>
+        <div class="log-inner">
+          <div class="input-row">
+            <button class="adj-btn" id="minus-btn">−</button>
+            <input type="number" id="squat-input" value="10" min="1" max="500" />
+            <button class="adj-btn" id="plus-btn">+</button>
+          </div>
+          <button class="btn-primary" id="log-btn">VALIDER</button>
+          <div id="log-feedback" class="log-feedback"></div>
+        </div>
+      </section>
+
+      <!-- LEADERBOARD -->
+      <section class="card leaderboard-card">
+        <div class="card-label">CLASSEMENT</div>
+        <div class="leaderboard" id="leaderboard"></div>
+      </section>
+
+      <!-- PROGRAM OVERVIEW -->
+      <section class="card program-card">
+        <div class="card-label">PROGRAMME COMPLET</div>
+        <div class="program-grid" id="program-grid"></div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
