@@ -37,7 +37,7 @@ const PROGRAM = [
 const SQUAT_TYPES = [
   { key: 'classique', label: 'Classique',    difficulty: 1 },
   { key: 'profond',   label: 'Profond',       difficulty: 2 },
-  { key: 'saute',     label: 'Sauté longue',  difficulty: 2 },
+  { key: 'saute',     label: 'Sauté (descente longue)',  difficulty: 2 },
   { key: 'iso',       label: 'Isométrie 5s',  difficulty: 3 },
 ];
 
